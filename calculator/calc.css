@@ -165,4 +165,8 @@ section {
   .input {
       width: 150px;
   }
+
+  .result{
+    width: 280px;
+  }
 }
