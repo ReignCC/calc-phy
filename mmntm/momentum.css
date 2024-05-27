@@ -1,3 +1,5 @@
+/* You may find that some of the classes here are of similar name to the ones from impulse. The reason why is because I first started creating the Impulse side then moved on to Momentum. So, in order not to take much time, I just copied the same HTML, CSS, and JS of Impulse to Momentum. Then just changed some calculations and some conversion scenarios.  */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap');
 
 body {

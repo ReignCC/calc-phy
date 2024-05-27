@@ -33,7 +33,7 @@ document.getElementById('download-pdf').addEventListener('click', function() {
   }
 
   doc.text(resultText, 10, 10);
-  doc.save('impulse_result.pdf');
+  doc.save('calc-phy_impulse.pdf');
 });
 
 document.getElementById('copy-to-clipboard').addEventListener('click', function() {

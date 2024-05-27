@@ -1,3 +1,4 @@
+// You may find that some of the variables here are of similar name to the ones from impulse. The reason why is because I first started creating the Impulse side then moved on to Momentum. So, in order not to take much time, I just copied the same HTML, CSS, and JS of Impulse to Momentum. Then just changed some calculations and some conversion scenarios. 
 
 document.getElementById('calculate').addEventListener('click', function() {
   var force = parseFloat(document.getElementById('force').value);
@@ -41,7 +42,7 @@ document.getElementById('download-pdf').addEventListener('click', function() {
   }
 
   doc.text(resultText, 10, 10);
-  doc.save('impulse_result.pdf');
+  doc.save('calc-phy_momentum.pdf');
 });
 
 document.getElementById('copy-to-clipboard').addEventListener('click', function() {
