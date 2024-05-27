@@ -118,15 +118,15 @@ section {
 }
 
 .button-confirm:hover {
-  margin: 50px auto 0 auto;
-  width: 120px;
-  height: 40px;
-  border-radius: 5px;
   border: 2px solid white;
   background-color: BLACK;
   box-shadow: 4px 4px WHITE;
-  font-size: 17px;
-  font-weight: 600;
   color: white;
-  cursor: pointer;
+}
+
+@media (max-width: 400px) {
+
+  .input {
+      width: 150px;
+  }
 }

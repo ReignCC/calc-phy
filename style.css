@@ -255,6 +255,7 @@ section {
   section {
     gap: 30px; /* increased gap for better spacing */
   }
+}
 
   @media (max-width: 300px) {
     .calcphy {
