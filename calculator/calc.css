@@ -154,11 +154,35 @@ section {
 }
 
 .button-confirm:hover {
-  border: 2px solid white;
-  background-color: BLACK;
-  box-shadow: 4px 4px WHITE;
-  color: white;
+  transform: translateY(-0.33em);
 }
+
+.button-confirm:active{
+  transform: translateY(0);
+}
+
+.button-round {
+  margin: 10px auto 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+}
+
+.button-round:hover {
+  transform: translateY(-0.33em);
+}
+
+.button-round:active{
+  transform: translateY(0);
+}
+
 
 @media (max-width: 400px) {
 

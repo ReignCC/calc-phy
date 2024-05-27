@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="calc.css">
   <title>calc-phy</title>
+
 </head>
 
 <body>
@@ -33,36 +34,35 @@
       </form>
 
       <div class="pad">
-        <div class ="answer" id="answer">
+        <div class="answer" id="answer">
           <div id="result" class="result"></div>
+
+          <div class="btns">
+            <button type="button" class="button-round" id="download-pdf">
+              <svg fill="#000000" width="25px" height="25px" viewBox="0 0 24 24" id="down" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" class="icon flat-color"><path id="primary" d="M19.71,13.29a1,1,0,0,0-1.42,0L13,18.59V3a1,1,0,0,0-2,0V18.59l-5.29-5.3a1,1,0,0,0-1.42,1.42l7,7a1,1,0,0,0,1.42,0l7-7A1,1,0,0,0,19.71,13.29Z" style="fill: rgb(0, 0, 0);"></path></svg>
+            </button>
+
+            <button class="button-round" id="copy-to-clipboard">
+              <svg width="25px" height="25px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1 9.50006C1 10.3285 1.67157 11.0001 2.5 11.0001H4L4 10.0001H2.5C2.22386 10.0001 2 9.7762 2 9.50006L2 2.50006C2 2.22392 2.22386 2.00006 2.5 2.00006L9.5 2.00006C9.77614 2.00006 10 2.22392 10 2.50006V4.00002H5.5C4.67158 4.00002 4 4.67159 4 5.50002V12.5C4 13.3284 4.67158 14 5.5 14H12.5C13.3284 14 14 13.3284 14 12.5V5.50002C14 4.67159 13.3284 4.00002 12.5 4.00002H11V2.50006C11 1.67163 10.3284 1.00006 9.5 1.00006H2.5C1.67157 1.00006 1 1.67163 1 2.50006V9.50006ZM5 5.50002C5 5.22388 5.22386 5.00002 5.5 5.00002H12.5C12.7761 5.00002 13 5.22388 13 5.50002V12.5C13 12.7762 12.7761 13 12.5 13H5.5C5.22386 13 5 12.7762 5 12.5V5.50002Z"
+                  fill="#000000" style="fill: rgb(0, 0, 0);"
+                  ></path>
+              </svg>
+            </button>
+           
+          </div>
+          
         </div>
+        
       </div>
-      
       
     </div>
   </section>
 
-  <script>
-    document.getElementById('calculate').addEventListener('click', function() {
-      const force = parseFloat(document.getElementById('force').value);
-      const time = parseFloat(document.getElementById('time').value);
-      const timeUnit = document.getElementById('time-unit').value;
-      const answerDiv = document.getElementById('answer');
-
-      if (isNaN(force) || isNaN(time)) {
-        document.getElementById('result').innerText = 'Please enter valid numbers for force and time.';
-        return;
-      }
-
-      const impulse = force * time;
-      const unit = 'N' + timeUnit;
-
-      document.getElementById('result').innerText = `Impulse: ${impulse} ${unit}\n\nSolution:\nI = (F)(t)\nI = (${force}N)(${time}${timeUnit})\nI = ${impulse} ${unit}`;
-
-      answerDiv.style.display = 'block';
-
-    });
-  </script>
+  <script src="calc.js"></script>
   
 </body>
 </html>
