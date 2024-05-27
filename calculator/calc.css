@@ -3,6 +3,8 @@
 body {
   background-color: #f9fcff;
   background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+
+  /* background: black; */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 800;
@@ -12,6 +14,12 @@ body {
 .container {
   display: flex;
   flex-direction: row;
+}
+
+a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 section {
@@ -98,7 +106,7 @@ section {
 }
 
 .pad{
-  padding: 15px;
+  padding: 10px;
 }
 
 .result{
@@ -117,7 +125,7 @@ section {
 
 .unit-cs {
   width: 60px;
-  height: 40px;
+  height: 54px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
   background-color: var(--bg-color);
@@ -183,8 +191,31 @@ section {
   transform: translateY(0);
 }
 
+.button-out {
+  margin: 5px auto 0 auto;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: white;
+  box-shadow: 4px 4px black;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--font-color);
+  cursor: pointer;
+  padding: 10px 0px;
+}
 
-@media (max-width: 400px) {
+.button-out:hover {
+  transform: translateY(-0.33em);
+}
+
+.button-out:active{
+  transform: translateY(0);
+}
+
+
+@media (max-width: 420px) {
 
   .input {
       width: 185px;
@@ -192,5 +223,16 @@ section {
 
   .result{
     width: 280px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .input {
+      width: 150px;
+  }
+
+  .result{
+    width: 260px;
   }
 }
