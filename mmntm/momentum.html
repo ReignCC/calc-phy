@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="calc.css">
-  <title>calc-phy</title>
+  <link rel="stylesheet" href="momentum.css">
+  <title>CALC-PHY momentum</title>
 
 </head>
 
@@ -13,20 +13,21 @@
   <section>
     <div class="test">
       <form class="form" id="impulse-form">
-        <div class="title">Welcome,<br><span>your friendly impulse calculator</span></div>
+        <div class="title">Welcome,<br><span>your friendly momentum calculator</span></div>
         <div class="input-con">
-          <input type="number" placeholder="FORCE" name="force" class="input" id="force">
+          <input type="number" placeholder="MASS" name="force" class="input" id="force">
           <select class="unit-cs" name="force-unit" id="force-unit" placeholder="unit">
-            <option value="N">N</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
           </select>
         </div>
 
         <div class="input-con">
-          <input type="number" placeholder="TIME" name="time" class="input" id="time">
+          <input type="number" placeholder="VELOCITY" name="time" class="input" id="time">
           <select class="unit-cs" name="time-unit" id="time-unit" placeholder="unit">
-            <option value="s">s</option>
-            <option value="min">min</option>
-            <option value="h">h</option>
+            <option value="m/s">m/s</option>
+            <option value="cm/s">cm/s</option>
+            <option value="km/h">km/h</option>
           </select>
         </div>
         
@@ -63,7 +64,7 @@
     </div>
   </section>
 
-  <script src="calc.js"></script>
+  <script src="momentum.js"></script>
   
 </body>
 </html>
