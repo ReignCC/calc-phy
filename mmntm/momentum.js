@@ -27,6 +27,7 @@ document.getElementById('calculate').addEventListener('click', function() {
   answerDiv.style.display = 'block';
 });
 
+//the function for the download button
 const script = document.createElement('script');
 script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
 document.head.appendChild(script);
@@ -45,6 +46,7 @@ document.getElementById('download-pdf').addEventListener('click', function() {
   doc.save('calc-phy_momentum.pdf');
 });
 
+//copy the text for the copy button
 document.getElementById('copy-to-clipboard').addEventListener('click', function() {
   const resultText = document.getElementById('result').innerText;
   if (!resultText) {
@@ -62,6 +64,7 @@ document.getElementById('copy-to-clipboard').addEventListener('click', function(
   alert('Result copied to clipboard!');
 });
 
+//music function, it plays lofi music.
 let audio = new Audio ("/music/lofi.mp3");
 audio.volume = 0.4;
 var play = document.getElementById("play");
