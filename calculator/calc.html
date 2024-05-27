@@ -11,29 +11,58 @@
   
   <section>
     <div class="test">
-      <form class="form">
+      <form class="form" id="impulse-form">
         <div class="title">Welcome,<br><span>your friendly impulse calculator</span></div>
         <div class="input-con">
-          <input type="number" placeholder="FORCE" name="force" class="input">
-          <select class="unit-cs" name="unit" placeholder="unit">
+          <input type="number" placeholder="FORCE" name="force" class="input" id="force">
+          <select class="unit-cs" name="force-unit" id="force-unit" placeholder="unit">
             <option value="N">N</option>
           </select>
         </div>
 
         <div class="input-con">
-          <input type="number" placeholder="TIME" name="time" class="input">
-          <select class="unit-cs" name="unit" placeholder="unit">
+          <input type="number" placeholder="TIME" name="time" class="input" id="time">
+          <select class="unit-cs" name="time-unit" id="time-unit" placeholder="unit">
             <option value="s">s</option>
-            <option value="m">m</option>
+            <option value="min">min</option>
             <option value="h">h</option>
           </select>
         </div>
         
-        
-        <button class="button-confirm">CALCULATE</button>
+        <button type="button" class="button-confirm" id="calculate">CALCULATE</button>
       </form>
+
+      <div class="pad">
+        <div class ="answer" id="answer">
+          <div id="result" class="result"></div>
+        </div>
+      </div>
+      
+      
     </div>
   </section>
 
+  <script>
+    document.getElementById('calculate').addEventListener('click', function() {
+      const force = parseFloat(document.getElementById('force').value);
+      const time = parseFloat(document.getElementById('time').value);
+      const timeUnit = document.getElementById('time-unit').value;
+      const answerDiv = document.getElementById('answer');
+
+      if (isNaN(force) || isNaN(time)) {
+        document.getElementById('result').innerText = 'Please enter valid numbers for force and time.';
+        return;
+      }
+
+      const impulse = force * time;
+      const unit = 'N' + timeUnit;
+
+      document.getElementById('result').innerText = `Impulse: ${impulse} ${unit}\n\nSolution:\nI = (F)(t)\nI = (${force}N)(${time}${timeUnit})\nI = ${impulse} ${unit}`;
+
+      answerDiv.style.display = 'block';
+
+    });
+  </script>
+  
 </body>
 </html>
