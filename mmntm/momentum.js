@@ -61,3 +61,14 @@ document.getElementById('copy-to-clipboard').addEventListener('click', function(
 
   alert('Result copied to clipboard!');
 });
+
+let audio = new Audio ("/music/lofi.mp3");
+audio.volume = 0.4;
+var play = document.getElementById("play");
+var count = 0;
+function playMusic(){
+  if(count == 0){
+      count = 1;
+      audio.play();    
+      } 
+}
