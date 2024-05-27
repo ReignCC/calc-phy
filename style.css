@@ -221,7 +221,7 @@ section {
 /* Media query for screens smaller than 800px */
 @media (max-width: 800px) {
   .calcphy {
-    height: 80px;
+    height: 50px;
     margin: 20px; /* added margin for spacing */
   }
 
