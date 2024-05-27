@@ -258,7 +258,7 @@ section {
 
   @media (max-width: 300px) {
     .calcphy {
-      height: 50px;
+      height: 30px;
       margin: 20px; /* added margin for spacing */
     }
   
